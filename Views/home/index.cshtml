@@ -1,0 +1,351 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    
+    }
+
+<head>
+
+   
+
+
+$(document).ready(function () {
+    $('.slider_wrapper')._TMS({
+        show: 0,
+        pauseOnHover: false,
+        prevBu: '.prev',
+        nextBu: '.next',
+        playBu: false,
+        duration: 800,
+        preset: 'fade',
+        pagination: true, //'.pagination',true,'<ul></ul>'
+        pagNums: false,
+        slideshow: 5000,
+        numStatus: false,
+        banners: 'fade',
+        waitBannerAnimation: false,
+        progressBar: false
+    });
+});
+$(document).ready(function () {
+    ! function () {
+        var map = [],
+            names = [],
+            win = $(window),
+            header = $('header'),
+            currClass
+            $('.content').each(function (n) {
+                map[n] = this.offsetTop
+                names[n] = $(this).attr('id')
+            })
+            win
+                .on('scroll', function () {
+                    var i = 0
+                    while (map[i++] <= win.scrollTop());
+                    if (currClass !== names[i - 2])
+                        currClass = names[i - 2]
+                    header.removeAttr("class").addClass(names[i - 2])
+                })
+    }();
+});
+function goToByScroll(id) {
+    $('html,body').animate({
+        scrollTop: $("#" + id).offset().top
+    }, 'slow');
+}
+$(document).ready(function () {
+    $().UItoTop({
+        easingType: 'easeOutQuart'
+    });
+});
+</script>
+<!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<link rel="stylesheet" media="screen" href="css/ie.css">
+<![endif]-->
+</head>
+<body>
+
+
+
+    <div class="page5">
+
+   
+
+
+
+
+     <style> 
+        .captionOrange, .captionBlack
+        {
+            color: #fff;
+            font-size: 20px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 4px;
+        }
+        .captionOrange
+        {
+            background: #EB5100;
+            background-color: rgba(235, 81, 0, 0.6);
+        }
+        .captionBlack
+        {
+        	font-size:16px;
+            background: #000;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        a.captionOrange, A.captionOrange:active, A.captionOrange:visited
+        {
+        	color: #ffffff;
+        	text-decoration: none;
+        }
+        a.captionOrange:hover
+        {
+            color: #eb5100;
+            text-decoration: underline;
+            background-color: #eeeeee;
+            background-color: rgba(238, 238, 238, 0.7);
+        }
+        .bricon
+        {
+            background: url(../img/browser-icons.png);
+        }
+    </style>
+    <!-- it works the same with all jquery version from 1.3.1 to 2.0.3 -->
+    <script type="text/javascript" src="~/Scripts/jquery-1.9.1.min.js"></script>
+    <!-- use jssor.slider.mini.js (39KB) or jssor.sliderc.mini.js (31KB, with caption, no slideshow) or jssor.sliders.mini.js (26KB, no caption, no slideshow) instead for release -->
+    <!-- jssor.slider.mini.js = jssor.sliderc.mini.js = jssor.sliders.mini.js = (jssor.core.js + jssor.utils.js + jssor.slider.js) -->
+    <script type="text/javascript" src="~/Scripts/jssor.core.js"></script>
+    <script type="text/javascript" src="~/Scripts/jssor.utils.js"></script>
+    <script type="text/javascript" src="~/Scripts/jssor.slider.js"></script>
+    <script>
+        jQuery(document).ready(function ($) {
+            var options = {
+                $AutoPlay: true,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
+                $AutoPlayInterval: 4000,                            //[Optional] Interval (in milliseconds) to go for next slide since the previous stopped if the slider is auto playing, default value is 3000
+                $SlideDuration: 500,                                //[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 500
+                $DragOrientation: 3,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
+
+                $ThumbnailNavigatorOptions: {
+                    $Class: $JssorThumbnailNavigator$,              //[Required] Class to create thumbnail navigator instance
+                    $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+
+                    $SpacingX: 10,                                  //[Optional] Horizontal space between each thumbnail in pixel, default value is 0
+                    $SpacingY: 3,                                   //[Optional] Vertical space between each thumbnail in pixel, default value is 0
+                    $DisplayPieces: 6,                              //[Optional] Number of pieces to display, default value is 1
+                    $ParkingPosition: 204,                          //[Optional] The offset position to park thumbnail,
+
+                    $DirectionNavigatorOptions: {
+                        $Class: $JssorDirectionNavigator$,              //[Requried] Class to create direction navigator instance
+                        $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+                        $AutoCenter: 2,                                 //[Optional] Auto center arrows in parent container, 0 No, 1 Horizontal, 2 Vertical, 3 Both, default value is 0
+                        $Steps: 3                                       //[Optional] Steps to go for each navigation request, default value is 1
+                    }
+                }
+            };
+
+            var jssor_slider1 = new $JssorSlider$("slider1_container", options);
+        });
+    </script>
+        <div class="page5">
+    <!-- Jssor Slider Begin -->
+    <!-- You can move inline styles (except 'top', 'left', 'width' and 'height') to css file or css block. -->
+    <div id="slider1_container" style="position: relative; width: 600px;
+        height: 420px;">
+
+        <!-- Loading Screen -->
+        <div u="loading" style="position: absolute; top: 0px; left: 0px;">
+            <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
+                background-color: #000; top: 0px; left: 0px;width: 100%;height:100%;">
+            </div>
+            <div style="position: absolute; display: block; background: url(~/Content/images/2.jpg) no-repeat center center;
+                top: 0px; left: 0px;width: 100%;height:100%;">
+            </div>
+        </div>
+
+        <!-- Slides Container -->
+        <div u="slides" style="cursor: move; position: absolute; left: 240px; top: -50px; width: 900px; height: 600px;
+            overflow: hidden;">
+           
+            <div>
+                <img u="image" src="~/Content/images/15.jpg" />
+              
+            </div>
+            <div>
+                <img u="image" src="~/Content/images/66.jpg" />
+               
+            </div>
+            <div>
+                <img u="image" src="~/Content/images/10.jpg" />
+            </div>
+            <div>
+                <img u="image" src="~/Content/images/61.jpg" />
+            </div>
+            <div>
+                <img u="image" src="~/Content/images/12.jpg" />
+            </div>
+
+
+             <div>
+                <img u="image" src="~/Content/images/62.jpg" />
+            </div>
+
+             <div>
+                <img u="image" src="~/Content/images/64.jpg" />
+            </div>
+
+
+             <div>
+                <img u="image" src="~/Content/images/68.jpg" />
+            </div>
+
+
+             <div>
+                <img u="image" src="~/Content/images/69.jpg" />
+                <img u="thumb" src="~/Content/images/6.jpg" />
+            </div>
+           
+        </div>
+        
+        <!-- Thumbnail Navigator Skin Begin -->
+        <!-- ThumbnailNavigator Skin End -->
+        <a style="display: none" href="http://www.jssor.com">jQuery Gallery</a>
+        <!-- Trigger -->
+    </div>
+    
+      
+      
+
+
+
+
+
+
+    <br><br><br><br><br><br>
+
+      <div class="socials" style=" top: 800px;"> <a href="https://www.facebook.com/ChenabCollegeJhangOfficial"></a> <a href="#"></a> <a href="#"></a> <a href="#"></a> </div><br><br>
+
+
+
+        <div class="container_12">
+    <div class="grid_12">
+      <div class="slogan">
+        <h3> <a onClick="goToByScroll('page3'); return false;" href="#"><span> Services </span></a> for Our <a onClick="goToByScroll('page4'); return false;" href="#"><em>Students </em> & <em>Teachers </em></a></h3>
+        <div class="text1"> <a href="#" class="tm_link"> </a> Our service portal will help you in a lot of ways.Please select one of following box to get services <br>
+          </div>
+      </div>
+    </div>
+            
+        
+        
+        
+        
+        
+        
+         <div class="grid_3">
+      <div class="box maxheight1"> <img src="~/Content/images/55.jpg" alt="">
+        <div class="text1"><a href='@Url.Action("teacher","teacher")'><pre>   <font color="aqua">   Teachers</a></div></font>
+                             
+
+         </div>
+    </div>
+    <div class="grid_3">
+      <div class="box maxheight1"> <img src="~/Content/images/54.jpg" alt="">
+        <div class="text1"><a href='@Url.Action("student","student")'><pre>       <font color="aqua"> Studens</a></div>
+        </div>
+    </div>
+    <div class="grid_3">
+      <div class="box maxheight1"> <img src="~/Content/images/56.jpg" alt="">
+        <div class="text1"><a href='@Url.Action("admin","home")'><pre>     <font color="aqua">   Admin</a></div>
+         </div>
+    </div>
+             <div class="grid_3">
+      <div class="box maxheight1"> <img src="~/Content/images/57.jpg" alt="">
+        <div class="text1"><a href="#"><pre>      <font color="aqua">  News</a></div>
+       </div>
+    </div>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+    
+    <div id="page5" class="content">
+  <div class="container_12">
+    <div class="grid_12">
+      <div class="slogan">
+        <h3>Get in Touch</h3>
+        <div class="text1">  </div>
+      </div>
+    </div>
+    <div class="clear"></div>
+    <div class="map">
+      <div class="grid_3">
+        <div class="text1">Address</div>
+        <address>
+        <dl>
+          <dt>The Chenab College Jhang<br>
+            12 kilometer chiniot road<br>
+            jhang</dt>
+          <dd><span>Freephone:</span>03157604161</dd>
+          <dd><span>Telephone:</span>03157604161</dd>
+          <dd><span>FAX:</span>03157604161</dd>
+          <dd>E-mail: <a href="#" class="link-1">bitf10m015@pucit.edu.pk</a></dd>
+          <dd>Skype: <a href="#" class="link-1">bitf10m015@pucit.edu.pk</a></dd>
+        </dl>
+        </address>
+      </div>
+      <div class="grid_3">
+        <div class="text1">&nbsp;</div>
+        <figure class="">
+          <iframe src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Brooklyn,+New+York,+NY,+United+States&amp;aq=0&amp;sll=37.0625,-95.677068&amp;sspn=61.282355,146.513672&amp;ie=UTF8&amp;hq=&amp;hnear=Brooklyn,+Kings,+New+York&amp;ll=40.649974,-73.950005&amp;spn=0.01628,0.025663&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe>
+        </figure>
+      </div>
+      <div class="grid_5 prefix_1">
+        <div class="text1">Ask a Question</div>
+        <form id="form" action="#">
+          <div class="success_wrapper">
+            <div class="success">Contact form submitted!<br>
+              <strong>We will be in touch soon.</strong> </div>
+          </div>
+          <fieldset>
+            <label class="name">
+              <input type="text" value="Name:">
+              <br class="clear">
+              <span class="error error-empty">*This is not a valid name.</span><span class="empty error-empty">*This field is required.</span> </label>
+            <label class="email">
+              <input type="text" value="E-mail:">
+              <br class="clear">
+              <span class="error error-empty">*This is not a valid email address.</span><span class="empty error-empty">*This field is required.</span> </label>
+            <label class="message">
+              <textarea>Message:</textarea>
+              <br class="clear">
+              <span class="error">*The message is too short.</span> <span class="empty">*This field is required.</span> </label>
+            <div class="clear"></div>
+            <div class="btns"><a data-type="submit" class="link1">Send</a>
+              <div class="clear"></div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+</div>
+    </div>
+
+      
+     
+      
+      
+      
+      
+     
+      
+
+
+</body>
+</html>

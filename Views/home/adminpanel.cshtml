@@ -1,0 +1,116 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    
+    }
+@model CMS.Models.student
+
+
+
+
+<head>
+   
+
+
+  <script src="~/Scripts/jquery-1.8.0.js"></script>
+
+<script>
+    $(document).ready(function () {
+
+       
+       
+        $("#btn1").click(function () {
+            $("#teacherdiv").hide();
+            
+
+            $("#studentdiv").slideDown("slow");
+
+
+
+            
+            $("#btn2").click(function () {
+                $("#studentdiv").hide();
+            
+
+                $("#teacher").slideDown("slow");
+            });
+
+
+      
+
+
+        })
+    
+</script>
+
+
+
+
+
+
+
+   
+ 
+
+
+   
+
+
+<script>
+
+    
+</script>
+
+
+
+
+</head>
+<body>
+
+
+
+<div id="page3" class="content">
+  <div class="container_12">
+    <div class="grid_12">
+      <div class="slogan">
+        <h3>ADMIN PANEL</h3>
+        <div class="text1"> Welcome Admin  </div>
+     
+
+           </div>
+    </div>
+
+      <div id="studentdiv">
+    <div class="grid_3">
+      <div class="box maxheight1" > <a href='@Url.Action("Create","student")'><img src="~/Content/images/50.jpg" alt="" id="a"   ></a>  
+
+        <div class="text1"><a href="#">ADD</a></div>
+        Will be updated soon </div>
+    </div>
+    <div class="grid_3">
+      <div class="box maxheight1"><a href='@Url.Action("del","student")'> <img src="~/Content/images/51.jpg" alt="" id="b"> </a>
+        <div class="text1"><a href="#">Delete</a></div>
+        Will be updated soon </div>
+    </div>
+    <div class="grid_3">
+      <div class="box maxheight1"> <a href='@Url.Action("Index","student")'><img src="~/Content/images/53.jpg" alt="" id="c"></a>
+        <div class="text1"><a href="#">EDIT</a></div>
+        Will be updated soon </div>
+    </div>
+    <div class="grid_3">
+      <div class="box maxheight1"><a href='@Url.Action("Index","student")'> <img src="~/Content/images/52.jpg" alt="" id="d"></a>
+        <div class="text1"><a href="#">Update</a></div>
+        Will be updated soon </div>
+    </div>
+  </div>
+      
+      
+      </div>
+
+    <br>
+
+
+     
+
+   

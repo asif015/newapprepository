@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+ <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+
+<html>
+    <head>
+
+
+    <title>Chenab college</title>
+   
+
+
+    <meta charset="utf-8">
+<link rel="icon" href="~/Content/images/favicon.ico">
+<link rel="shortcut icon" href="~/Content/images/favicon.ico">
+<link rel="stylesheet" href="~/Content/CSS/style.css">
+<link rel="stylesheet" href="~/Content/CSS/camera.css">
+<link rel="stylesheet" href="~/Content/CSS/form.css">
+<script src="~/Scripts/jquery.js"></script>
+<script src="~/Scripts/jquery-migrate-1.1.1.js"></script>
+<script src="~/Scripts/superfish.js"></script>
+<script src="~/Scripts/forms.js"></script>
+<script src="~/Scripts/jquery.ui.totop.js"></script>
+<script src="~/Scripts/jquery.equalheights.js"></script>
+<script src="~/Scripts/jquery.easing.1.3.js"></script>
+<script src="~/Scripts/jquery.ui.totop.js"></script>
+<script src="~/Scripts/tms-0.4.1.js"></script>
+
+
+
+
+       
+
+
+
+    
+</head>
+<body>
+   
+      <header>
+  <div class="container_12">
+    <div class="grid_12">
+    
+      <div class="menu_block">
+        <nav class="">
+          <ul class="sf-menu">
+            <li class="current men"><a  href='@Url.Action("index","home")'>Home </a> <strong class="hover"></strong></li>
+            
+              <li class=" men2"><a  href='@Url.Action("schedule","home")'>Scadule</a> <strong class="hover"></strong></li>
+
+            <li class=" men3"><a  href='@Url.Action("gallery","home")'>Galery</a> <strong class="hover"></strong></li>
+           
+ 
+               <li class=" men4"><a onClick="goToByScroll('page5'); return false;" href="#">Contacts</a> <strong class="hover"></strong></li>
+
+          </ul>
+        </nav>
+    
+        <div class="clear"></div>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+<left><h3><font  color="white" face="Agency FB"><b><l>        <img src="~/Content/images/logo.jpg">
+Chenab group of Colleges</l></b></font></h3>
+    </left>
+   
+</header>
+
+
+    
+    
+    
+     @RenderBody()
+
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+
+
+
+
+    <footer>
+  <div class="container_12">
+    <div class="grid_12">
+      <div class="copy"> <a onClick="goToByScroll('page1'); return false;" href="#"><img src="images/footer_logo.png" alt=""></a> &copy; 2045 | <a href="#">Privacy Policy</a> <br>
+        Design by: <a href="http:///">MUhammad Asif</a> </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+</footer>
+
+
+  
+
+
+
+</body>
+</html>

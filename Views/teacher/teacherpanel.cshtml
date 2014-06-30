@@ -1,0 +1,189 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    
+    }
+@model CMS.Models.student
+
+
+
+
+<head>
+   
+
+
+  <script src="~/Scripts/jquery-1.8.0.js"></script>
+
+<script>
+    $(document).ready(function () {
+
+        $("#add").hide()
+        $("#delete").hide();
+        $("#edit").hide();
+        $("#update").hide();
+
+
+        $("#a").click(function () {
+            $("#delete").hide();
+            $("#edit").hide();
+            $("#update").hide();
+
+           $("#add").slideDown("slow");
+       });
+
+
+       $("#b").click(function () {
+           $("#add").hide();
+           $("#edit").hide();
+           $("#update").hide();
+
+           $("#delete").slideDown("slow");
+       });
+
+
+       $("#c").click(function () {
+           $("#delete").hide();
+           $("#update").hide()
+           $("#add").hide()
+
+           $("#edit").slideDown("slow");
+       });
+
+       $("#d").click(function () {
+           $("#edit").hide();
+           $("#add").hide()
+           $("#delete").hide()
+
+
+           $("#update").slideDown("slow");
+       });
+
+   });</script>
+
+
+
+
+
+
+
+   
+ 
+
+
+   
+
+
+<script>
+
+    
+</script>
+
+
+
+
+</head>
+<body>
+
+
+
+<div id="page3" class="content">
+  <div class="container_12">
+    <div class="grid_12">
+      <div class="slogan">
+        <h3>Teacher Panel</h3>
+        <div class="text1"> Welcome Teacher </div>
+      </div>
+    </div>
+    <div class="grid_3">
+      <div class="box maxheight1" > <a href='@Url.Action("Index","File")'><img src="~/Content/images/70.jpg" alt="" id="a"   ></a>  
+
+        <div class="text1"><a href="#">Mark attendance</a></div>
+        Will be updated soon </div>
+    </div>
+    <div class="grid_3">
+      <div class="box maxheight1"><a href='@Url.Action("Index","File")'> <img src="~/Content/images/71.jpg" alt="" id="b"> </a>
+        <div class="text1"><a href="#">Add Assignments</a></div>
+        Will be updated soon </div>
+    </div>
+    <div class="grid_3">
+      <div class="box maxheight1"> <a href='@Url.Action("Index","File")'><img src="~/Content/images/72.jpg" alt="" id="c"></a>
+        <div class="text1"><a href="#">Add Quizes</a></div>
+        Will be updated soon </div>
+    </div>
+    <div class="grid_3">
+      <div class="box maxheight1"><a href='@Url.Action("Index","File")'> <img src="~/Content/images/73.jpg" alt="" id="d"></a>
+        <div class="text1"><a href="#">ADD Announcements</a></div>
+        Will be updated soon </div>
+    </div>
+  </div>
+
+
+    <div id="add">
+
+     <div class="slogan">
+        <h3> <a onClick="goToByScroll('page3'); return false;" href="#"><span> </span></a> <a onClick="goToByScroll('page4'); return false;" href="#"><em><br>Add Student </em>  <em> </em></a></h3>
+        <div class="text1"> <a href="#" class="tm_link"> </a> Please enter student id $ name <br>
+
+            student id<input type="text"><br>
+            student name<input type="text"><br />
+                   <div class="text">  <a href='@Url.Action("adminpanel","home")'>Submit</a ></div>
+
+          </div>
+         </div>
+</div>
+          
+    
+    <div id="delete">
+    <div class="slogan">
+        <h3> <a onClick="goToByScroll('page3'); return false;" href="#"><span> </span></a> <a onClick="goToByScroll('page4'); return false;" href="#"><em><br><br>Delete Student </em>  <em> </em></a></h3>
+        <div class="text1"> <a href="#" class="tm_link"> </a> Please enter student id to delete <br>
+
+            student id<input type="text"><br>
+                   <div class="text">  <a href='@Url.Action("adminpanel","home")'>Submit</a ></div>
+
+          </div>
+   
+</div>
+
+    </div>
+
+
+     <div id="edit">
+    <div class="slogan">
+        <h3> <a onClick="goToByScroll('page3'); return false;" href="#"><span> </span></a> <a onClick="goToByScroll('page4'); return false;" href="#"><em><br><br>Edit Student </em>  <em> </em></a></h3>
+        <div class="text1"> <a href="#" class="tm_link"> </a> Please enter student id to Edit <br>
+
+            student id<input type="text"><br>
+                   <div class="text">  <a href='@Url.Action("adminpanel","home")'>Submit</a ></div>
+
+          </div>
+   
+</div>
+
+    </div>
+
+
+
+
+
+     <div id="update">
+    <div class="slogan">
+        <h3> <a onClick="goToByScroll('page3'); return false;" href="#"><span> </span></a> <a onClick="goToByScroll('page4'); return false;" href="#"><em><br><br>Update Student </em>  <em> </em></a></h3>
+        <div class="text1"> <a href="#" class="tm_link"> </a> Please enter student id to update <br>
+
+            student id<input type="text"><br>
+                   <div class="text">  <a href='@Url.Action("adminpanel","home")'>Submit</a ></div>
+
+          </div>
+   
+</div>
+
+    </div>
+
+
+
+
+
+      
+

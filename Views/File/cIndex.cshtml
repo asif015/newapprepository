@@ -1,0 +1,31 @@
+﻿@model IEnumerable<CMS.Models.Table>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<br><br><br><br><h2>Assignments</h2>
+
+<p>
+</p>
+<table cellpadding="4">
+    <tr>
+       
+        
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            <img src="~/Files/@Html.DisplayFor(modelItem => item.name)" height="25%" width="25%">
+        </td>
+        <td>
+          <left>  Teacher wo upload assignment:
+          <font color="red"> <b> @Html.DisplayFor(modelItem => item.teacher.name)<b></font></left>
+        </td>
+       
+    </tr>
+}
+
+</table>
