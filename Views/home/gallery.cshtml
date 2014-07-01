@@ -2,7 +2,7 @@
 
 
 @{
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = null;
     
     }
 
@@ -11,6 +11,34 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
+
+
+
+    
+
+    <meta charset="utf-8">
+<link rel="icon" href="~/Content/images/favicon.ico">
+<link rel="shortcut icon" href="~/Content/images/favicon.ico">
+<link rel="stylesheet" href="~/Content/CSS/style.css">
+<link rel="stylesheet" href="~/Content/CSS/camera.css">
+<link rel="stylesheet" href="~/Content/CSS/form.css">
+<script src="~/Scripts/jquery.js"></script>
+<script src="~/Scripts/jquery-migrate-1.1.1.js"></script>
+<script src="~/Scripts/superfish.js"></script>
+<script src="~/Scripts/forms.js"></script>
+<script src="~/Scripts/jquery.ui.totop.js"></script>
+<script src="~/Scripts/jquery.equalheights.js"></script>
+<script src="~/Scripts/jquery.easing.1.3.js"></script>
+<script src="~/Scripts/jquery.ui.totop.js"></script>
+<script src="~/Scripts/tms-0.4.1.js"></script>
+
+
+
+
+       
+
+
+
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta http-equiv="imagetoolbar" content="no" />
 	<title>FancyBox 1.3.4 | Demonstration</title>
@@ -105,33 +133,70 @@
 	</script>
 </head>
 <body id="my">
+
+
+
+     <header>
+  <div class="container_12">
+    <div class="grid_12">
+    
+      <div class="menu_block">
+        <nav class="">
+          <ul class="sf-menu">
+            <li class="current men"><a  href='@Url.Action("index","home")'>Home </a> <strong class="hover"></strong></li>
+            
+              <li class=" men2"><a  href='@Url.Action("schedule","home")'>Scadule</a> <strong class="hover"></strong></li>
+
+            <li class=" men3"><a  href='@Url.Action("gallery","home")'>Galery</a> <strong class="hover"></strong></li>
+           
+ 
+               <li class=" men4"><a onClick="goToByScroll('page5'); return false;" href="#">Contacts</a> <strong class="hover"></strong></li>
+
+          </ul>
+        </nav>
+    
+        <div class="clear"></div>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+<left><h3><font  color="white" face="Agency FB"><b><l>        <img src="~/Content/images/logo.jpg">
+Chenab group of Colleges</l></b></font></h3>
+    </left>
+   
+</header>
    
 
 
 	<br><br><br><br><br><br><br>
     <h3>Enjoy fancy box images</h3>
+    <center>
+		<a id="example3" href="~/Content/images/10.jpg"><img alt="example2" src="~/Content/images/10.jpg" /></a>
 
-		<a id="example2" href="~/Content/images/110.jpg"><img alt="example2" src="~/Content/images/110.jpg" /></a>
-
-		<a id="example3" href="~/Content/images/101.jpg"><img alt="example3" src="~/Content/images/101.jpg" /></a>
 		
 	
 
-		<a id="example2" href="~/Content/images/110.jpg"><img alt="example2" src="~/Content/images/110.jpg" /></a>
+		<a id="example3" href="~/Content/images/21.jpg"><img alt="example2" src="~/Content/images/21.jpg" /></a>
 
-		<a id="example3" href="~/Content/images/101.jpg"><img alt="example3" src="~/Content/images/101.jpg" /></a>
+		<a id="example3" href="~/Content/images/22.jpg"><img alt="example3" src="~/Content/images/23.jpg" /></a>
 
-		<a id="example2" href="~/Content/images/110.jpg"><img alt="example2" src="~/Content/images/110.jpg" /></a>
+		<a id="example3" href="~/Content/images/24.jpg"><img alt="example2" src="~/Content/images/24.jpg" /></a>
 
-		<a id="example3" href="~/Content/images/101.jpg"><img alt="example3" src="~/Content/images/101.jpg" /></a>
+		<a id="example3" href="~/Content/images/25.jpg"><img alt="example3" src="~/Content/images/25.jpg" /></a>
 		
+		<a id="example3" href="~/Content/images/26.jpg"><img alt="example3" src="~/Content/images/26.jpg" /></a>
 	
 
+		<a id="example3" href="~/Content/images/27.jpg"><img alt="example3" src="~/Content/images/27.jpg" /></a>
 	
+		<a id="example3" href="~/Content/images/28.jpg"><img alt="example3" src="~/Content/images/28.jpg" /></a>
 
+		<a id="example3" href="~/Content/images/29.jpg"><img alt="example3" src="~/Content/images/29.jpg" /></a>
 	
+		<a id="example3" href="~/Content/images/30.jpg"><img alt="example3" src="~/Content/images/30.jpg" /></a>
 	
 	
 </div>
+        </center>
 </body>
 </html>
